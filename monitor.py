@@ -21,13 +21,7 @@ OUT_KEYWORDS = [
 ]
 
 # 命中且没命中上面的关键词，即视为"可以买了"——根据商品页实际文案调整
-IN_KEYWORDS = [
-    "立即购买",
-    "马上抢",
-    "去支付",
-    "立即秒杀",
-    "拼单购买",
-]
+IN_KEYWORDS = [ "超值惊喜福袋",]
 
 MOBILE_UA = (
     "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
@@ -76,7 +70,7 @@ def main() -> None:
 
     print(f"out_hit={out_hit}  in_hit={in_hit}")
 
-    if not out_hit and in_hit:
+    if in_hit:
         print("检测到商品可以购买了！")
         push_bark("🔥商品补货/开售了", "快去拼多多下单付款！")
     else:
