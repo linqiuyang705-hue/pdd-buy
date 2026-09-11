@@ -67,7 +67,8 @@ def main() -> None:
 
     out_hit = any(k in body_text for k in OUT_KEYWORDS)
     in_hit = any(k in body_text for k in IN_KEYWORDS)
-
+    
+    print(body_text[:800])
     print(f"out_hit={out_hit}  in_hit={in_hit}")
 
     if in_hit:
